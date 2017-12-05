@@ -1,6 +1,5 @@
 from pathlib import Path
 from dfault.objects import Dfault
-from repeatedtimer import RepeatedTimer
 from terminaltables import AsciiTable
 from time import sleep
 import click
