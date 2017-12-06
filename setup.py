@@ -7,7 +7,7 @@
 from setuptools import setup
 
 
-version = "1.1.0"
+version = "1.1.1"
 
 with open("README.rst", "rb") as f:
     long_descr = f.read().decode("utf-8")
@@ -27,6 +27,6 @@ setup(
     long_description = long_descr,
     author = "Joey Sham",
     author_email = "sham.joey@gmail.com",
-    url = "http://www.joeyism.com",
+    url = "https://github.com/joeyism/py-spotme",
     install_requires=req
     )
