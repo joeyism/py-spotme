@@ -14,6 +14,8 @@ pip3 install --user spotme
 ## Setup
 Since `spotcheck` uses boto3, you'll have to setup the same way. You can view the [docs here](http://boto3.readthedocs.io/en/latest/guide/quickstart.html)
 
+A sample `config` file that is to in `~/.aws/config` is also in this repository.
+
 
 ## Usage
 To use, run

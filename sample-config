@@ -1,0 +1,3 @@
+[default]
+region=ca-central-1
+instancetype=t2.micro
