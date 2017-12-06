@@ -68,6 +68,10 @@ CLI with the options
 Version
 -------
 
+-  **1.1.0**
+
+   -  Added customization security group
+
 -  **1.0.x**
 
    -  Fix Bugs

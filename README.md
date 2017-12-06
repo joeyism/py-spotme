@@ -47,6 +47,9 @@ spotme --InstanceType=t2.micro --SpotPrice=0.006 --InstanceCount=1 --Availabilit
 ```
 
 ## Version
+* **1.1.0**
+    * Added customization security group
+
 * **1.0.x**
     * Fix Bugs
 
