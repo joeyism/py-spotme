@@ -16,8 +16,9 @@ commandline, go to my browser and create a spot instance, then go back
 to my commandline to rsync/scp everything up. This tool allows me to
 stay in my commandline the whole way.
 
-If you want to know how much spot prices are for specific regions, you
-should try `spotcheck <https://github.com/joeyism/py-spotcheck>`__
+If you want to know how much spot prices are for specific regions
+historically, you should try
+`spotcheck <https://github.com/joeyism/py-spotcheck>`__
 
 Installation
 ------------
@@ -35,8 +36,8 @@ Since ``spotcheck`` uses boto3, you’ll have to setup the same way. You
 can view the `docs
 here <http://boto3.readthedocs.io/en/latest/guide/quickstart.html>`__
 
-A sample ``config`` file that is to in ``~/.aws/config`` is also in this
-repository.
+A sample ``config`` file that is to be placed in ``~/.aws/config`` is
+also in this repository.
 
 Usage
 -----

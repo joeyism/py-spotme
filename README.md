@@ -4,7 +4,7 @@ A command line tool that allows you to spin up AWS EC2 Spot Instances instantly
 ## Background
 I do a lot of computation, but my computer is pretty crappy, so often I have to spin up ec2 spot instances to do some computation. [Spot Instances](https://aws.amazon.com/ec2/spot/) are a good resource to use AWS EC2 instances for fairly cheap, and I am very frugal. I created this tool because I didn't want to have to develop something on my commandline, go to my browser and create a spot instance, then go back to my commandline to rsync/scp everything up. This tool allows me to stay in my commandline the whole way.
 
-If you want to know how much spot prices are for specific regions, you should try [spotcheck](https://github.com/joeyism/py-spotcheck)
+If you want to know how much spot prices are for specific regions historically, you should try [spotcheck](https://github.com/joeyism/py-spotcheck)
 
 ## Installation
 To install, simply run
@@ -16,7 +16,7 @@ pip3 install --user spotme
 ## Setup
 Since `spotcheck` uses boto3, you'll have to setup the same way. You can view the [docs here](http://boto3.readthedocs.io/en/latest/guide/quickstart.html)
 
-A sample `config` file that is to in `~/.aws/config` is also in this repository.
+A sample `config` file that is to be placed in `~/.aws/config` is also in this repository.
 
 
 ## Usage
@@ -42,6 +42,7 @@ Key-Pair Name, pick from:
         the-one-keypair
 Default is [the-one-keypair]:
 ```
+
 The result is of the form
 
 
