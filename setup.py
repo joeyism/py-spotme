@@ -7,7 +7,7 @@
 from setuptools import setup
 
 
-version = "1.1.1"
+version = "1.2.0"
 
 with open("README.rst", "rb") as f:
     long_descr = f.read().decode("utf-8")

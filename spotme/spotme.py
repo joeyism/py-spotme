@@ -20,6 +20,8 @@ client = boto3.client("ec2")
 g["availabilityzone"] = client.describe_availability_zones()["AvailabilityZones"][0]["ZoneName"]
 security_groups = client.describe_security_groups()["SecurityGroups"]
 security_groups = [(group["GroupId"], group["GroupName"]) for group in security_groups]
+keynames = client.describe_key_pairs()["KeyPairs"]
+keynames = [kp["KeyName"] for kp in keynames]
 
 def get_spot_instance_id(response):
     ids = []
@@ -71,7 +73,13 @@ def print_urls(urls):
         default=d.get("securitygroup", security_groups[0][0]),
         help="Security Group to put the spot instance"
         )
-def main(instancetype, spotprice, instancecount, availabilityzone, launchimageid, securitygroup):
+@click.option(
+        "--KeyName", 
+        prompt="Key-Pair Name, pick from:\n\t" + "\n\t".join([kp for kp in keynames]) +"\nDefault is",
+        default=d.get("keyname", keynames[0]),
+        help="Key-Pair Name for the spot instance"
+        )
+def main(instancetype, spotprice, instancecount, availabilityzone, launchimageid, securitygroup, keyname):
     interval = 3
     client = boto3.client("ec2")
     response = client.request_spot_instances(
@@ -83,7 +91,8 @@ def main(instancetype, spotprice, instancecount, availabilityzone, launchimageid
                         "AvailabilityZone": availabilityzone
                         },
                     "InstanceType": instancetype,
-                    "SecurityGroupIds": [securitygroup]
+                    "SecurityGroupIds": [securitygroup],
+                    "KeyName": keyname
                 }
             )
     pending_spot_ids = get_spot_instance_id(response)
