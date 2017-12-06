@@ -16,6 +16,9 @@ commandline, go to my browser and create a spot instance, then go back
 to my commandline to rsync/scp everything up. This tool allows me to
 stay in my commandline the whole way.
 
+If you want to know how much spot prices are for specific regions, you
+should try `spotcheck <https://github.com/joeyism/py-spotcheck>`__
+
 Installation
 ------------
 
@@ -44,7 +47,23 @@ To use, run
 
     spotme
 
-and a series of questions will be prompted.
+and a series of questions will be prompted. The questions will be of the
+form
+
+::
+
+    Instance Type [t2.micro]:
+    Spot Price: 0.006    
+    Instance Count [1]:
+    Availability Zone [ca-central-1a]:                                          
+    Launch Image Id [ami-d29e25b6]:  
+    Security Group, pick from:                                           
+            sg-xxxxxxxx(Some Security Group)
+            sg-yyyyyyyy(default)                                              
+    Default is [sg-xxxxxxxx]:                              
+    Key-Pair Name, pick from:        
+            the-one-keypair
+    Default is [the-one-keypair]:
 
 The result is of the form
 
