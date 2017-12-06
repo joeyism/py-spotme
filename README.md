@@ -42,7 +42,7 @@ Launching spot states sir-123abcde
 If you don't want to enter the CLI prompt every time, you can run the CLI with the options
 
 ```bash
-spotme --InstanceType=t2.micro --SpotPrice=0.006 --InstanceCount=1 --AvailabilityZone=ca-central-1a --LaunchImageId=ami-d29e25b6
+spotme --InstanceType=t2.micro --SpotPrice=0.006 --InstanceCount=1 --AvailabilityZone=ca-central-1a --LaunchImageId=ami-d29e25b6 --SecurityGroup=sg-123abcd
 
 ```
 
